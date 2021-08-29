@@ -5,7 +5,7 @@ import {changeStatus} from '../../action/index';
 
 const Detail = ({match, state, changeStatus}) => {
   const {id}= match.params;
-  const detail = state ? state.find(el => el.id === Number(id)) : null ;
+  const detail = state ? state.find(el => el.id === Number(id)) : null 
   
     return (  
         <div div class="card">   
@@ -16,7 +16,7 @@ const Detail = ({match, state, changeStatus}) => {
           <h5>{detail.date}</h5>
           <h5>{detail.detail}</h5>
           <h5>{detail.status}</h5>
-          <button onClick={()=>changeStatus(id)} >Fulfilled</button>
+          <button onClick={()=>changeStatus(detail.id)} >Fulfill</button>
           </>
           )}
           
